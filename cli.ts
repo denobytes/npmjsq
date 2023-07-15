@@ -77,7 +77,7 @@ for (const qq of qEntries) {
     }
 
     let packageJsonData = JSON.parse(scriptSrc);
-    let result = packageJsonData.context.objects;
+    let result = packageJsonData.context.objects || [];
 
     if (outputJSON) {
       result = JSON.stringify(result, null, "  ");
