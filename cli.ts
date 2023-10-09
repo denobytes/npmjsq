@@ -43,7 +43,7 @@ const baseUrl = "https://www.npmjs.com/search";
 let qParams = "";
 
 // setup query
-let searchTerm = Deno.args[0];
+let searchTerm = args._[0];
 let searchQuery = `${baseUrl}?q=${searchTerm}${qParams}`;
 
 if (debugMode) {
